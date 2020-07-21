@@ -1,6 +1,6 @@
 <?php
 
-namespace Extcode\CartIdeal\Controller\Order;
+namespace RedSeadog\CartIdeal\Controller\Order;
 
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Extcode\CartIdeal\Utility;
+namespace RedSeadog\CartIdeal\Utility;
 
 use Extcode\Cart\Domain\Repository\CartRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
