@@ -1,5 +1,5 @@
 <?php
-namespace RedSeadog\SfEventMgtIdeal\Service\Configuration;
+namespace RedSeadog\CartIdeal\Service\Configuration;
 
 /**
  *  Implement current interface to create custom configuration providers.

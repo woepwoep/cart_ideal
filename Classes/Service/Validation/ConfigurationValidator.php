@@ -7,9 +7,9 @@ require_once 'Configuration/DefaultConfiguration.php';
 require_once 'Exceptions/ConnectorException.php';
 */
 
-use \RedSeadog\SfEventMgtIdeal\Service\Configuration\DefaultConfiguration;
-use \RedSeadog\SfEventMgtIdeal\Service\Configuration\IConnectorConfiguration;
-use \RedSeadog\SfEventMgtIdeal\Service\Log\LogLevel;
+use \RedSeadog\CartIdeal\Service\Configuration\DefaultConfiguration;
+use \RedSeadog\CartIdeal\Service\Configuration\IConnectorConfiguration;
+use \RedSeadog\CartIdeal\Service\Log\LogLevel;
 
 /**
  * ConfigurationValidator checks PHP server settings and the settings from config.conf file.

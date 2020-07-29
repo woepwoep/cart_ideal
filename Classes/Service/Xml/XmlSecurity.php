@@ -1,11 +1,11 @@
 <?php
-namespace RedSeadog\SfEventMgtIdeal\Service\Xml;
+namespace RedSeadog\CartIdeal\Service\Xml;
 
 use DOMDocument;
 use Exception;
 use XMLSecurityKey;
 use XMLSecurityDSig;
-use \RedSeadog\SfEventMgt\Service\Exceptions\SecurityException;
+use \RedSeadog\Cart\Service\Exceptions\SecurityException;
 
 class XmlSecurity
 {

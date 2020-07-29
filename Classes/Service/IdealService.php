@@ -1,30 +1,30 @@
 <?php
-namespace RedSeadog\SfEventMgtIdeal\Service;
+namespace RedSeadog\CartIdeal\Service;
 
-use \RedSeadog\SfEventMgtIdeal\Service\Configuration\IConnectorConfiguration;
-use \RedSeadog\SfEventMgtIdeal\Service\Log\IConnectorLog;
+use \RedSeadog\CartIdeal\Service\Configuration\IConnectorConfiguration;
+use \RedSeadog\CartIdeal\Service\Log\IConnectorLog;
 
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\DirectoryRequest;
-use \RedSeadog\SfEventMgtIdeal\Service\Xml\XmlSerializer;
-use \RedSeadog\SfEventMgtIdeal\Service\Xml\XmlSecurity;
-use \RedSeadog\SfEventMgtIdeal\Service\Log\EntityValidator;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\Merchant;
-use \RedSeadog\SfEventMgtIdeal\Service\Http\WebRequest;
+use \RedSeadog\CartIdeal\Service\Entities\DirectoryRequest;
+use \RedSeadog\CartIdeal\Service\Xml\XmlSerializer;
+use \RedSeadog\CartIdeal\Service\Xml\XmlSecurity;
+use \RedSeadog\CartIdeal\Service\Log\EntityValidator;
+use \RedSeadog\CartIdeal\Service\Entities\Merchant;
+use \RedSeadog\CartIdeal\Service\Http\WebRequest;
 
-use \RedSeadog\SfEventMgtIdeal\Service\Exceptions\iDEALException;
-use \RedSeadog\SfEventMgtIdeal\Service\Exceptions\ValidationException;
-use \RedSeadog\SfEventMgtIdeal\Service\Exceptions\SerializationException;
-use \RedSeadog\SfEventMgtIdeal\Service\Exceptions\SecurityException;
+use \RedSeadog\CartIdeal\Service\Exceptions\iDEALException;
+use \RedSeadog\CartIdeal\Service\Exceptions\ValidationException;
+use \RedSeadog\CartIdeal\Service\Exceptions\SerializationException;
+use \RedSeadog\CartIdeal\Service\Exceptions\SecurityException;
 
 use DOMDocument;
 
-use \RedSeadog\SfEventMgtIdeal\Service\Configuration\DefaultConfiguration;
+use \RedSeadog\CartIdeal\Service\Configuration\DefaultConfiguration;
 
-use \RedSeadog\SfEventMgtIdeal\Service\Log\DefaultLog;
+use \RedSeadog\CartIdeal\Service\Log\DefaultLog;
 
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\AcquirerStatusRequest;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\AcquirerTransactionRequest;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\Transaction;
+use \RedSeadog\CartIdeal\Service\Entities\AcquirerStatusRequest;
+use \RedSeadog\CartIdeal\Service\Entities\AcquirerTransactionRequest;
+use \RedSeadog\CartIdeal\Service\Entities\Transaction;
 
 
 /**
@@ -117,13 +117,13 @@ class IdealService implements \TYPO3\CMS\Core\SingletonInterface
      * Start a transaction.
      *
      * @param string $issuerID
-     * @param RedSeadog\SfEventMgt\Ideal\Entities\Transaction $transaction
+     * @param RedSeadog\Cart\Ideal\Entities\Transaction $transaction
      * @param null $merchantReturnUrl
-     * @throws RedSeadog\SfEventMgt\Ideal\Exceptions\SerializationException
-     * @throws RedSeadog\SfEventMgt\Ideal\Exceptions\iDEALException
-     * @throws RedSeadog\SfEventMgt\Ideal\Exceptions\ValidationException
-     * @throws RedSeadog\SfEventMgt\Ideal\Exceptions\SecurityException
-     * @return RedSeadog\SfEventMgt\Ideal\Entities\AcquirerTransactionResponse
+     * @throws RedSeadog\Cart\Ideal\Exceptions\SerializationException
+     * @throws RedSeadog\Cart\Ideal\Exceptions\iDEALException
+     * @throws RedSeadog\Cart\Ideal\Exceptions\ValidationException
+     * @throws RedSeadog\Cart\Ideal\Exceptions\SecurityException
+     * @return RedSeadog\Cart\Ideal\Entities\AcquirerTransactionResponse
      */
     public function startTransaction($issuerID, Transaction $transaction,  $merchantReturnUrl = null)
     {

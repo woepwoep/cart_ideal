@@ -1,5 +1,5 @@
 <?php
-namespace RedSeadog\SfEventMgtIdeal\Service\Entities;
+namespace RedSeadog\CartIdeal\Service\Entities;
 
 require_once("Merchant.php");
 require_once("AbstractRequest.php");

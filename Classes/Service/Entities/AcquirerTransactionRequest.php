@@ -1,5 +1,5 @@
 <?php
-namespace RedSeadog\SfEventMgtIdeal\Service\Entities;
+namespace RedSeadog\CartIdeal\Service\Entities;
 
 
 require_once("Transaction.php");

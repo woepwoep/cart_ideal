@@ -1,5 +1,5 @@
 <?php
-namespace RedSeadog\SfEventMgtIdeal\Service\Log;
+namespace RedSeadog\CartIdeal\Service\Log;
 
 class LogLevel
 {

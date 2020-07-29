@@ -1,5 +1,5 @@
 <?php
-namespace RedSeadog\SfEventMgtIdeal\Service\Http;
+namespace RedSeadog\CartIdeal\Service\Http;
 
 class WebRequest
 {

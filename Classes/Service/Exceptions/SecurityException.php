@@ -1,5 +1,5 @@
 <?php
-namespace RedSeadog\SfEventMgtIdeal\Service\Exceptions;
+namespace RedSeadog\CartIdeal\Service\Exceptions;
 /**
  *  This exception occurs during security checks of transport messages.
  */

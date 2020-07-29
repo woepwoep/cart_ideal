@@ -1,5 +1,5 @@
 <?php
-namespace RedSeadog\SfEventMgtIdeal\Service\Exceptions;
+namespace RedSeadog\CartIdeal\Service\Exceptions;
 
 use Exception;
 

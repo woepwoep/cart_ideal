@@ -1,5 +1,5 @@
 <?php
-namespace RedSeadog\SfEventMgtIdeal\Service;
+namespace RedSeadog\CartIdeal\Service;
 
 
 use \TYPO3\CMS\Core\Utility\GeneralUtility;

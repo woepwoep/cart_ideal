@@ -1,8 +1,8 @@
 <?php
-namespace RedSeadog\SfEventMgtIdeal\Service\Configuration;
+namespace RedSeadog\CartIdeal\Service\Configuration;
 
-use \RedSeadog\SfEventMgtIdeal\Service\Exceptions\ConnectorException;
-use \RedSeadog\SfEventMgtIdeal\Service\Log\LogLevel;
+use \RedSeadog\CartIdeal\Service\Exceptions\ConnectorException;
+use \RedSeadog\CartIdeal\Service\Log\LogLevel;
 
 /**
  *

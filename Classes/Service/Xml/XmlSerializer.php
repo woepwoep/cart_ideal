@@ -1,5 +1,5 @@
 <?php
-namespace RedSeadog\SfEventMgtIdeal\Service\Xml;
+namespace RedSeadog\CartIdeal\Service\Xml;
 
 use DOMDocument;
 use DOMNodeList;
@@ -7,21 +7,21 @@ use DOMElement;
 use DateTime;
 use DateTimeZone;
 
-use \RedSeadog\SfEventMgtIdeal\Service\Exceptions\iDEALException;
-use \RedSeadog\SfEventMgtIdeal\Service\Exceptions\SerializationException;
+use \RedSeadog\CartIdeal\Service\Exceptions\iDEALException;
+use \RedSeadog\CartIdeal\Service\Exceptions\SerializationException;
 
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\AbstractRequest;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\DirectoryRequest;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\AcquirerTransactionRequest;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\AcquirerStatusRequest;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\Merchant;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\Transaction;
+use \RedSeadog\CartIdeal\Service\Entities\AbstractRequest;
+use \RedSeadog\CartIdeal\Service\Entities\DirectoryRequest;
+use \RedSeadog\CartIdeal\Service\Entities\AcquirerTransactionRequest;
+use \RedSeadog\CartIdeal\Service\Entities\AcquirerStatusRequest;
+use \RedSeadog\CartIdeal\Service\Entities\Merchant;
+use \RedSeadog\CartIdeal\Service\Entities\Transaction;
 
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\DirectoryResponse;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\AcquirerTransactionResponse;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\AcquirerStatusResponse;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\Country;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\Issuer;
+use \RedSeadog\CartIdeal\Service\Entities\DirectoryResponse;
+use \RedSeadog\CartIdeal\Service\Entities\AcquirerTransactionResponse;
+use \RedSeadog\CartIdeal\Service\Entities\AcquirerStatusResponse;
+use \RedSeadog\CartIdeal\Service\Entities\Country;
+use \RedSeadog\CartIdeal\Service\Entities\Issuer;
 
 class XmlSerializer
 {
@@ -34,7 +34,7 @@ class XmlSerializer
 
         $className = get_class($input);
 
-        if ($className === "RedSeadog\SfEventMgtIdeal\Service\Entities\DirectoryRequest")
+        if ($className === "RedSeadog\CartIdeal\Service\Entities\DirectoryRequest")
         {
             $element = $doc->createElement("DirectoryReq");
             $this->serializeAbstractRequest($element, $input);
@@ -43,7 +43,7 @@ class XmlSerializer
             $this->serializeDirectoryRequest($element, $input);
             $doc->appendChild($element);
         }
-        else if ($className === "RedSeadog\SfEventMgtIdeal\Service\Entities\AcquirerTransactionRequest")
+        else if ($className === "RedSeadog\CartIdeal\Service\Entities\AcquirerTransactionRequest")
         {
             $element = $doc->createElement("AcquirerTrxReq");
             $this->serializeAbstractRequest($element, $input);
@@ -52,7 +52,7 @@ class XmlSerializer
             $this->serializeAcquirerTransactionRequest($element, $input);
             $doc->appendChild($element);
         }
-        else if ($className === "RedSeadog\SfEventMgtIdeal\Service\Entities\AcquirerStatusRequest")
+        else if ($className === "RedSeadog\CartIdeal\Service\Entities\AcquirerStatusRequest")
         {
             $element = $doc->createElement("AcquirerStatusReq");
             $this->serializeAbstractRequest($element, $input);
@@ -138,7 +138,7 @@ class XmlSerializer
 
     /**
      * @param \DOMDocument $xml
-     * @return \RedSeadog\SfEventMgtIdeal\Service\Entities\AbstractResponse
+     * @return \RedSeadog\CartIdeal\Service\Entities\AbstractResponse
      */
     public function deserialize(DOMDocument $xml)
     {
@@ -256,10 +256,10 @@ class XmlSerializer
                 $id = $this->getFirstValue($issuer, "issuerID","Directory.Country.Issuer.issuerID");
                 $name = $this->getFirstValue($issuer, "issuerName","Directory.Country.Issuer.issuerName");
 
-                array_push($issuers, new \RedSeadog\SfEventMgtIdeal\Service\Entities\Issuer($id, $name));
+                array_push($issuers, new \RedSeadog\CartIdeal\Service\Entities\Issuer($id, $name));
             }
 
-            array_push($countries, new \RedSeadog\SfEventMgtIdeal\Service\Entities\Country($names, $issuers));
+            array_push($countries, new \RedSeadog\CartIdeal\Service\Entities\Country($names, $issuers));
         }
 
         return new DirectoryResponse($createdTimestamp, $timestamp, $acquirerID, $countries);

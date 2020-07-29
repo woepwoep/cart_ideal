@@ -1,15 +1,15 @@
 <?php
-namespace RedSeadog\SfEventMgtIdeal\Service\Log;
+namespace RedSeadog\CartIdeal\Service\Log;
 
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\Merchant;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\AcquirerStatusResponse;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\AcquirerTransactionResponse;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\DirectoryResponse;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\DirectoryRequest;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\AcquirerStatusRequest;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\AcquirerTransactionRequest;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\Transaction;
-use \RedSeadog\SfEventMgtIdeal\Service\Exceptions\ValidationException;
+use \RedSeadog\CartIdeal\Service\Entities\Merchant;
+use \RedSeadog\CartIdeal\Service\Entities\AcquirerStatusResponse;
+use \RedSeadog\CartIdeal\Service\Entities\AcquirerTransactionResponse;
+use \RedSeadog\CartIdeal\Service\Entities\DirectoryResponse;
+use \RedSeadog\CartIdeal\Service\Entities\DirectoryRequest;
+use \RedSeadog\CartIdeal\Service\Entities\AcquirerStatusRequest;
+use \RedSeadog\CartIdeal\Service\Entities\AcquirerTransactionRequest;
+use \RedSeadog\CartIdeal\Service\Entities\Transaction;
+use \RedSeadog\CartIdeal\Service\Exceptions\ValidationException;
 
 /**
  *
@@ -21,32 +21,32 @@ class EntityValidator
     {
         $className = get_class($request);
 
-        if ($className === "RedSeadog\SfEventMgtIdeal\Service\Entities\DirectoryRequest")
+        if ($className === "RedSeadog\CartIdeal\Service\Entities\DirectoryRequest")
         {
             /* @var $request DirectoryRequest */
             $this->validateMerchant($request->getMerchant());
         }
-        else if ($className === "RedSeadog\SfEventMgtIdeal\Service\Entities\AcquirerTransactionRequest")
+        else if ($className === "RedSeadog\CartIdeal\Service\Entities\AcquirerTransactionRequest")
         {
             /* @var $request AcquirerTransactionRequest */
             $this->validateAcquirerTransactionRequest($request);
         }
-        else if ($className === "RedSeadog\SfEventMgtIdeal\Service\Entities\AcquirerStatusRequest")
+        else if ($className === "RedSeadog\CartIdeal\Service\Entities\AcquirerStatusRequest")
         {
             /* @var $request AcquirerStatusRequest */
             $this->validateAcquirerStatusRequest($request);
         }
-        else if ($className === "RedSeadog\SfEventMgtIdeal\Service\Entities\DirectoryResponse")
+        else if ($className === "RedSeadog\CartIdeal\Service\Entities\DirectoryResponse")
         {
             /* @var $request DirectoryResponse */
             $this->validateDirectoryResponse($request);
         }
-        else if ($className === "RedSeadog\SfEventMgtIdeal\Service\Entities\AcquirerTransactionResponse")
+        else if ($className === "RedSeadog\CartIdeal\Service\Entities\AcquirerTransactionResponse")
         {
             /* @var $request AcquirerTransactionResponse */
             $this->validateAcquirerTransactionResponse($request);
         }
-        else if ($className === "RedSeadog\SfEventMgtIdeal\Service\Entities\AcquirerStatusResponse")
+        else if ($className === "RedSeadog\CartIdeal\Service\Entities\AcquirerStatusResponse")
         {
             /* @var $request AcquirerStatusResponse */
             $this->validateAcquirerStatusResponse($request);

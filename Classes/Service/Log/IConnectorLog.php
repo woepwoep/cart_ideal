@@ -1,10 +1,10 @@
 <?php
-namespace RedSeadog\SfEventMgtIdeal\Service\Log;
+namespace RedSeadog\CartIdeal\Service\Log;
 
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\AbstractResponse;
-use \RedSeadog\SfEventMgtIdeal\Service\Exceptions\ConnectorException;
-use \RedSeadog\SfEventMgtIdeal\Service\Exceptions\iDEALException;
-use \RedSeadog\SfEventMgtIdeal\Service\Entities\AbstractRequest;
+use \RedSeadog\CartIdeal\Service\Entities\AbstractResponse;
+use \RedSeadog\CartIdeal\Service\Exceptions\ConnectorException;
+use \RedSeadog\CartIdeal\Service\Exceptions\iDEALException;
+use \RedSeadog\CartIdeal\Service\Entities\AbstractRequest;
 
 /**
  *  Implement this interface to get access to log messages at transport level.
